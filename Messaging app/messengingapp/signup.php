@@ -14,10 +14,10 @@
 </head>
 <body>
     
-	<img src="../images/logo.png">
+	
 	<!-- This create block for sign in -->
 	<div class="signup-form">
-		<form action="" method="post">
+		<form action="" method="post ">
 			<!-- This for topic -->
 			<div class="form-header">
 				<h2>Sign Up</h2>
@@ -26,7 +26,7 @@
             <!-- This for field Username -->
 			<div class="form-group">
 				<label>Username</label>
-				<input type="text" class="form-control" name="user_email" placeholder="Example: Nursuraida" autocomplete="off" required>
+				<input type="text" class="form-control" name="user_name" placeholder="Example: Nursuraida" autocomplete="off" required>
             </div>
             <!-- This for field Password -->
 			<div class="form-group">
@@ -54,7 +54,7 @@
             <!-- This for field Gender -->
 			<div class="form-group">
 				<label>Gender</label>
-				<select class="form-group" name="user_country" required>
+				<select class="form-group" name="user_gender" required>
                     <option disabled="">Select your Gender</option>
                     <option >Male</option>
                     <option >Female</option>           
@@ -69,7 +69,7 @@
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary btn-block btn-lg" name="sign_up">Sign Up</button>
 			</div>
-			<!-- <?php //include("signup_user.php"); ?> -->
+		    <?php include("signup_user.php"); ?>
 		</form>
 		<!-- This for Button and if don't have account -->
 		<div class="text-center small" style="color: #67428B;">Already have an account? <a href="signin.php">Signin here</a></div>

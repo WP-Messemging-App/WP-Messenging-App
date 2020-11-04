@@ -14,11 +14,6 @@ body{
 	font-family: 'Roboto', sans-serif;
 	
 }
-img{
-	height: 13vh;
-	margin-top: -20vh;
-
-}
 .form-control{
 	min-height: 41px;
 	box-shadow: none;
