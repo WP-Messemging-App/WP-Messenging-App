@@ -4,7 +4,7 @@
 	<title>Create a new Account</title>
     <meta charset="utf-8">
     <meta http-equiv="x-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googlepis.com/css?family=Roboto|Courgette|Pacifico:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -13,15 +13,12 @@
     <link rel="stylesheet" type="text/css" href="css/signup.css"> <!-- link for css sign in -->
 </head>
 <body>
-    
-	
 	<!-- This create block for sign in -->
 	<div class="signup-form">
 		<form action="" method="post">
 			<!-- This for topic -->
 			<div class="form-header">
 				<h2>Sign Up</h2>
-			
             </div>
             <!-- This for field Username -->
 			<div class="form-group">

@@ -2,7 +2,7 @@
 
 $con = mysqli_connect("localhost", "root", "", "mychat");
 
-    $user = "Select * from users";
+    $user = "select * from users";
 
     $run_user = mysqli_query($con, $user);
 
@@ -31,5 +31,6 @@ $con = mysqli_connect("localhost", "root", "", "mychat");
             </li>
         ";
     }
+
 
 ?>

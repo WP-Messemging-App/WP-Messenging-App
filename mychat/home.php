@@ -11,6 +11,8 @@ else {
 <html>
 <head>
     <title>MARSIN - HOME</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +22,7 @@ else {
     <div class="container main-section">
         <div class="row">
             <div class="col-md-3 col-sm-3 col-xs-12 left-sidebar">
-                <div class="input-group searchbox">
+               <div class="input-group searchbox"> 
                     <div class="input-group-btn">
                         <center><a href="include/find_friends.php"><button class="btn btn-default search-icon" name="search_user" type="submit">Add new user</button></a></center>
                     </div>
@@ -43,7 +45,6 @@ else {
                         $user_id = $row['user_id'];
                         $user_name = $row['user_name'];
                     ?> 
-
                     <!-- getting the user data on which user click -->
                     <?php
                         if(isset($_GET['user_name'])){
@@ -57,18 +58,19 @@ else {
 
                             $row_user = mysqli_fetch_array($run_user);
 
-                            $username = $row_user['user_name'];
+                            $username = $row_user['user_name' ];
                             $user_profile_image = $row_user['user_profile'];
                         }
-
-                        $total_messages = "select * from users_chat where (sender_username='$user_name' AND receiver_username='$username') OR (receiver_username='$user_name' AND sender_username='$username')";
+                        $total_messages = "select * from users_chat where (sender_username='$user_name
+                        ' AND receiver_username='$username') OR (receiver_username='$user_name'
+                         AND sender_username='$username')";
                         $run_messages = mysqli_query($con, $total_messages);
                         $total = mysqli_num_rows($run_messages);
                     ?>
 
                     <div class="col-md-12 right-header">
                         <div class="right-header-img">
-                            <img src=<?php echo "$user_profile_image"; ?>>
+                            <img src=<?php echo "$user_profile_image"; ?> >
                         </div>
                         <div class="right-header-detail">
                             <form method="post">
@@ -140,7 +142,7 @@ else {
                 <div class="row">
                     <div class="col-md-12 right-chat-textbox">
                         <form method="post">
-                            <input autocomplete="off" type="text" name="msg_content" placeholder="Write your message.......">
+                            <input autofocus autocomplete="off" type="text" name="msg_content" placeholder="Write your message.......">
                             <button class="btn" name="submit"><i class="fa fa-telegram" aria-hidden="true"></i></button>
                         </form>
                     </div>
@@ -162,7 +164,7 @@ else {
                     </div>  
                 ";
             }
-            else if(strlen($msg) > 100){
+            else if(strlen($msg) >100){
                 echo"
                     <div class='alert alert-danger'>
                       <strong><center>Message is Too long. Use only 100 characters</center></strong>

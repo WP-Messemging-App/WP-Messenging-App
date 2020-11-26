@@ -1,5 +1,5 @@
 <?php
-$con = mysql_connect("localhost", "root", "", "mychat") or die("Connection was not established");
+$con = mysqli_connect("localhost", "root", "", "mychat") or die("Connection was not established");
 	 function search_user(){
 
 	 	global $con;
@@ -7,21 +7,18 @@ $con = mysql_connect("localhost", "root", "", "mychat") or die("Connection was n
 	 	if (isset($_GET['search_btn'])){
 	 		$search_query = htmlentities($_GET['search_query']);
 	 		$get_user = "select * from users where user_name like '%$search_query%' or user_country like '%$search_query%'";
-
 	 	}else{
 	 		$get_user = "SELECT * FROM USERS order by user_country, user_name DESC LIMIT 5";
 	 	}
 
 	 	$run_user = mysqli_query($con, $get_user);
 
-	 	while ($row_user=mysqli_fetch_array($run_user)){
+	 	while ($row_user=mysqli_fetch_array($run_user)) {
 
 	 		$user_name = $row_user['user_name'];
 	 		$user_profile = $row_user['user_profile'];
 	 		$country = $row_user['user_country'];
 	 		$gender = $row_user['user_gender'];
-
-	 		
 
 	 		echo"
 
