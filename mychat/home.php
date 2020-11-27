@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <?php
+$page = $_SERVER['PHP_SELF'];
+$sec = "1";
 session_start();
 include("include/connection.php");
 
